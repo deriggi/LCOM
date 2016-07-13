@@ -7,7 +7,7 @@ class Industry(object):
 		self.cam = []
 		self.cam_length = 10;
 
-	# assign 10 scores from a random normal sample	
+	# assign cam scores from a random normal sample	
 	def assign_random_normal_scores(self):
 		for x in range (self.cam_length):
 			randy_normal = random()/2 - random()/2 + 0.5;
