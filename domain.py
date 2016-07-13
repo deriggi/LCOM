@@ -5,12 +5,13 @@ class Industry(object):
 	def __init__(self, industry_name):
 		self.name = industry_name
 		self.cam = []
-		self.cam_length = 10;
+		self.cam_length = 100;
+		self.cam_radius = 3.5;
 
 	# assign cam scores from a random normal sample	
 	def assign_random_normal_scores(self):
 		for x in range (self.cam_length):
-			randy_normal = random()/2 - random()/2 + 0.5;
+			randy_normal = random()*self.cam_radius - random()*self.cam_radius + self.cam_radius;
 			self.cam.append(randy_normal);
 
 	def output_cam(self):
